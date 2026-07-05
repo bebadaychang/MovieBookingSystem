@@ -4,4 +4,5 @@
 2. **Bước 2:** Vào `phpMyAdmin`, tạo một database mới và Import file `.sql` (file này chúng em đã để sẵn ở thư mục gốc của dự án).
 3. **Bước 3:** Cấu hình lại tài khoản/mật khẩu database trong file kết nối (nếu cần thiết ạ).
 4. **Bước 4:** Truy cập đường dẫn sau trên trình duyệt để chạy thử nghiệm dự án:
-   `http://localhost/[tên_thư_mục_của_thầy]/movie_website/index.php`
+   
+(http://localhost/account+cinebook+movie/movie_website/index.php)
