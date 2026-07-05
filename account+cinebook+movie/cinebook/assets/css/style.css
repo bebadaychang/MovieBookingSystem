@@ -1,0 +1,183 @@
+/* assets/css/style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #0d1117;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+/* ===== Thanh nav trên cùng ===== */
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto 16px auto;
+}
+.btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #21262d;
+    color: #ccc;
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    border: 1px solid #333;
+    transition: background 0.2s;
+}
+.btn-home:hover { background: #30363d; color: #fff; }
+.breadcrumb-nav {
+    color: #888;
+    font-size: 12px;
+}
+.breadcrumb-nav span { color: #ccc; }
+
+.panel {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.panel-title {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.panel-title.orange { background: #f59e0b; color: #000; }
+.panel-title.red { background: #ef4444; color: #fff; }
+
+/* ===== Lịch chiếu ===== */
+.date-tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.date-tab {
+    background: #21262d; color: #ccc; border: none;
+    padding: 8px 14px; border-radius: 8px; cursor: pointer; font-size: 12px;
+}
+.date-tab.active { background: #ef4444; color: #fff; }
+
+.cinema-block { margin-bottom: 16px; }
+.cinema-name { font-size: 15px; margin-bottom: 8px; color: #fff; }
+.format-tag {
+    background: #1f6feb33; color: #58a6ff; font-size: 11px;
+    padding: 3px 8px; border-radius: 4px; margin-right: 10px;
+}
+.time-slots { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.time-slot {
+    background: #21262d; color: #fff; border: none;
+    padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px;
+}
+.time-slot:hover { background: #30363d; }
+.time-slot.active { background: #ef4444; }
+
+/* ===== Sơ đồ ghế ===== */
+.seat-legend { display: flex; gap: 16px; font-size: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.seat-legend .box {
+    display: inline-block; width: 12px; height: 12px;
+    border-radius: 3px; margin-right: 4px; vertical-align: middle;
+}
+.box.gray { background: #555; }
+.box.red { background: #ef4444; }
+.box.white { background: #eee; }
+.box.orange { background: #f59e0b; }
+
+.screen-label {
+    text-align: center; color: #888; font-size: 11px;
+    border-bottom: 2px solid #444; padding-bottom: 8px; margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.seat-map { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.seat-row { display: flex; align-items: center; gap: 5px; }
+.row-label { width: 16px; font-size: 11px; color: #888; }
+
+.seat {
+    width: 22px; height: 22px;
+    background: #eee; border: none; border-radius: 4px;
+    cursor: pointer; font-size: 10px;
+}
+.seat.vip { background: #f59e0b; }
+.seat.booked { background: #555; cursor: not-allowed; }
+.seat.selected { background: #ef4444; color: #fff; }
+
+.seat-summary { margin-top: 20px; border-top: 1px solid #333; padding-top: 12px; }
+.seat-summary #total-price { color: #ef4444; font-size: 16px; margin: 8px 0; }
+
+.btn-red {
+    background: #ef4444; color: #fff; border: none;
+    padding: 10px 0; width: 100%; border-radius: 8px;
+    font-weight: bold; cursor: pointer; margin-top: 8px;
+}
+.btn-red:disabled { background: #555; cursor: not-allowed; }
+
+/* ===== Profile ===== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+}
+.profile-card {
+    background: #0f172a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 16px;
+}
+.profile-card h3 {
+    margin-bottom: 12px;
+    color: #f59e0b;
+}
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 14px;
+}
+.ticket-item {
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #111827;
+}
+.ticket-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+.ticket-status {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #374151;
+}
+.ticket-status.paid { background: #166534; color: #dcfce7; }
+.ticket-status.pending { background: #92400e; color: #fef3c7; }
+.ticket-status.cancelled { background: #991b1b; color: #fee2e2; }
+.ticket-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 4px;
+}
+.ticket-empty {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ===== Đánh giá ===== */
+.review-stars { color: #f59e0b; }
+.review-item { border-bottom: 1px solid #2a2a2a; padding: 12px 0; }
+.review-item .name { font-weight: bold; }
+.review-item .date { color: #888; font-size: 11px; float: right; }

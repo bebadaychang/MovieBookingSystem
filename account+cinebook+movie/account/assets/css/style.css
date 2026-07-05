@@ -1,0 +1,122 @@
+/* ==========================================================================
+   1. ĐỊNH DẠNG CHUNG (GLOBAL STYLES) - CHUẨN DARK MODE RẠP PHIM
+   ========================================================================== */
+body {
+    background-color: #0b111e !important; /* Màu xanh đen huyền bí như ảnh mẫu */
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/* Tùy biến thanh cuộn trình duyệt cho mượt và hợp màu */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b111e;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f293d;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e50914; /* Cuộn chuột đổi màu đỏ cực chất */
+}
+
+/* ==========================================================================
+   2. THANH ĐIỀU HƯỚNG & USER LINK (NAVBAR)
+   ========================================================================== */
+.user-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px; /* Bo tròn dạng viên thuốc */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.user-link:hover {
+    color: #ff333a !important;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   3. THẺ PHIM (MOVIE CARD) - BO GÓC & HIỆU ỨNG NỔI BẬT
+   ========================================================================== */
+.movie-card {
+    background: #131a26 !important; /* Nền card xám xanh nổi bật trên nền tối */
+    border: 1px solid #222f43 !important; /* Viền mịn tinh tế */
+    border-radius: 12px !important; /* Bo góc mềm mại giống ảnh mẫu */
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Nhấc nhẹ thẻ lên trên */
+    box-shadow: 0 12px 24px rgba(229, 9, 20, 0.25); /* Đổ bóng đỏ neon dịu nhẹ */
+    border-color: #e50914 !important; /* Đổi viền sang màu đỏ khi hover */
+}
+
+/* Ảnh phim bên trong card */
+.card img, .movie-card img {
+    height: 340px; /* Tăng nhẹ chiều cao cho chuẩn tỉ lệ poster phim */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng zoom nhẹ ảnh khi hover vào card */
+.movie-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Chỉnh chữ tên phim trong card */
+.movie-card .card-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   4. BỔ SUNG: CÁC Ô NHẬP LIỆU (INPUTS) CHO TRANG LOGIN / REGISTER
+   ========================================================================== */
+.form-control {
+    background-color: #1a2333 !important; /* Ô nhập màu tối */
+    border: 1px solid #2c3b54 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 11px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #6c7a93;
+}
+
+.form-control:focus {
+    background-color: #1d293d !important;
+    border-color: #e50914 !important; /* Viền đỏ rực khi click vào ô nhập */
+    box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25) !important;
+}
+
+/* Nút bấm Đăng nhập/Đăng ký/Đặt vé màu đỏ rạp phim */
+.btn-danger, .btn-submit-booking {
+    background-color: #e50914 !important;
+    border-color: #e50914 !important;
+    border-radius: 8px !important;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #b80710 !important;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.4);
+}
